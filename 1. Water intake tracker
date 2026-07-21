@@ -1,0 +1,24 @@
+/*1.A Java program that records a person's daily water intake (in liters) 
+for a week and displays the total and average water consumption.*/ 
+import java.util.Scanner;
+class Water {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        float amount,total=0,average;
+        System.out.println("Enter your daily amount of water you take per week?");
+        for (int i=1; i <= 7; i++) {
+            System.out.print("Day " + i + ": ");
+            float dailyamount = sc.nextFloat();
+            total=total+dailyamount;
+        }
+        average=total/7;
+        System.out.println(" ");
+        System.out.println("The total amount of water you consume per week is: " + total + " liters");
+        System.out.println("The average amount of water you consume per day is: " + average + " liters");
+         if (average<2.0f) {
+            System.out.println("Warning:Your average daily water consumption is not sufficient.");
+        } else {
+            System.out.println("Great job!Your water consumption is sufficient.");
+        }
+    }
+}
