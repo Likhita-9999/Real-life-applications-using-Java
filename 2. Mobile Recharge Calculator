@@ -1,0 +1,31 @@
+//A Java application that accepts recharge amount, GST percentage, and validity period, then displays the final payable amount and remaining balance.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+      double recharge_amount,GST_per,validity,total,balance,GST_amount;
+       System.out.println("Enter recharge amount ");
+       recharge_amount=sc.nextDouble();
+       System.out.println("Enter GST percentage");
+       GST_per=sc.nextDouble();
+       System.out.println("Enter validity period?");
+       validity=sc.nextDouble();
+       System.out.println("Enter your current balance ");
+       balance=sc.nextDouble();
+       GST_amount=(GST_per/100)*recharge_amount;
+       total=recharge_amount+GST_amount;
+       System.out.println("------Recharge Bill------");
+       System.out.println("Recharge amount: "+(recharge_amount));
+       System.out.println("GST percentage"+(GST_per));
+       System.out.println("Validity: "+(validity));
+       System.out.println("GST amount"+(GST_amount));
+       System.out.println("Current balance:"+(balance));
+       System.out.println("Total payable amount: "+(total));
+       double remainingbalance=balance-total;
+        if (remainingbalance >= 0) {
+            System.out.printf("Remaining Balance: "+remainingbalance);
+        } else {
+            System.out.printf("Insufficient balance!");
+        }
+    }
+}
