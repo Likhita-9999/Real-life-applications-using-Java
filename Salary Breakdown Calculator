@@ -1,0 +1,26 @@
+//A java program to calculate an employee's gross salary, deductions, and net salary using arithmetic operators.
+import java.util.Scanner;
+public class Salary {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter employee id");
+       int id=sc.nextInt();
+       System.out.println("Enter basic/monthly salary");
+       float salary=sc.nextFloat();
+       System.out.println("Enter bonus/other provisions amount");
+       double amount=sc.nextDouble();
+       System.out.println("Enter tax amount");
+       double tax=sc.nextDouble();
+       double gross_salary=salary+amount;
+       double total_salary=gross_salary-tax;
+       System.out.println("   ");
+       System.out.println("EMPLOYEE SALARY");
+       System.out.println("ID: "+(id));
+       System.out.println("Basic salary :"+(salary));
+       System.out.println("Bonus amount: "+(amount));
+       System.out.println("Gross Salary: " + gross_salary);
+       System.out.println("Tax amount: "+(tax));
+       System.out.println("Total salary per month: "+(total_salary));
+     
+    }
+}
