@@ -1,0 +1,28 @@
+//A Java program that accepts height and weight, calculates BMI, and categorizes the user as Underweight, Normal, Overweight, or Obese.
+import java.util.Scanner;
+public class Bmi {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter your weight(kg)");
+       double w=sc.nextDouble();
+       System.out.println("Enter your height(meters)");
+        double h=sc.nextDouble();
+        double BMI=(w/(h*h));
+        String category;
+          if (BMI<18.5) {
+            category = "Underweight";
+        } else if (BMI<25) {
+            category = "Normal";
+        } else if (BMI<30) {
+            category = "Overweight";
+        } else {
+            category = "Obese";
+        }
+        System.out.println("BMI ANALYSIS");
+        System.out.println("  ");
+        System.out.println("Weight(kg): "+(w));
+        System.out.println("Height(meters): "+(h));
+        System.out.println("Body mass index(BMI):"+(BMI));
+        System.out.println("Category: "+(category));
+    }
+}
