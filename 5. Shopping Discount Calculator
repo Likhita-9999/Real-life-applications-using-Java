@@ -17,6 +17,6 @@ public class Bmi {
        System.out.println("Discount: "+(disc));
        System.out.println("GST amount: "+(GST));
        System.out.println("Net total(after discount): "+(total_amount)+"/-");
-       System.out.println("Thank you for shoppiing!!");
+       System.out.println("Thank you for shopping!!");
     }
 }
