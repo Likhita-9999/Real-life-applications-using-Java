@@ -1,0 +1,21 @@
+//Calculate the final bill after applying discounts and GST based on the purchase amount.
+import java.util.Scanner;
+public class Bmi {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       double amount,GST,disc,total_amount;
+       System.out.println("Enter purchase amount");
+       amount=sc.nextDouble();
+       System.out.println("Enter discount amount");
+       disc=sc.nextDouble();
+       System.out.println("Enter GST amount");
+       GST=sc.nextDouble();
+       total_amount=amount+GST-disc;
+       System.out.println(" ");
+       System.out.println("=====BILL SUMMARY=====");
+       System.out.println("Amount: "+(amount));
+       System.out.println("Discount: "+(disc));
+       System.out.println("GST amount: "+(GST));
+       System.out.println("Net total(after discount): "+(total_amount)+"/-");
+    }
+}
